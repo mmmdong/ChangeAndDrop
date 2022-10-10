@@ -33,7 +33,7 @@ public class BrokenFloorController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         _parent.gameObject.SetActive(false);
-        FXManager.instance.PlayCubeExplosionFX(_parent.transform.position, Color.white);
+        FXManager.instance.PlayBallExplosionFX(_parent.transform.position, Color.white);
         GameManager.instance._camFloorQueue.Dequeue().SetActive(false);
     }
 }

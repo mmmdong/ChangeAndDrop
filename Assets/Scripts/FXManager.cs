@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FXManager : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _cubeExplosion;
+    [SerializeField] private ParticleSystem _ballExplosion;
 
-    ParticleSystem.MainModule _cubeExMainModule;
+    ParticleSystem.MainModule _ballExMainModule;
 
     public static FXManager instance;
 
@@ -20,13 +20,13 @@ public class FXManager : MonoBehaviour
 
     private void Start()
     {
-        _cubeExMainModule = _cubeExplosion.main;
+        _ballExMainModule = _ballExplosion.main;
     }
 
-    public void PlayCubeExplosionFX(Vector3 pos, Color color)
+    public void PlayBallExplosionFX(Vector3 pos, Color color)
     {
-        _cubeExMainModule.startColor = new ParticleSystem.MinMaxGradient(color);
-        _cubeExplosion.transform.position = pos;
-        _cubeExplosion.Play();
+        _ballExMainModule.startColor = new ParticleSystem.MinMaxGradient(color);
+        _ballExplosion.transform.position = pos;
+        _ballExplosion.Play();
     }
 }

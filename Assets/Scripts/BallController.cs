@@ -56,14 +56,14 @@ public class BallController : MonoBehaviour
     }
     public void ExplosionBalls()
     {
-        Collider[] surroundedCubes = Physics.OverlapSphere(collidedPoint, 2f);
+        Collider[] surroundedBalls = Physics.OverlapSphere(collidedPoint, 2f);
         float explosionForce = 500f;
         float explosionRadius = 1.5f;
 
-        for (var i = 0; i < surroundedCubes.Length; i++)
+        for (var i = 0; i < surroundedBalls.Length; i++)
         {
-            if (surroundedCubes[i].attachedRigidbody != null)
-                surroundedCubes[i].attachedRigidbody.AddExplosionForce(explosionForce, collidedPoint, explosionRadius);
+            if (surroundedBalls[i].attachedRigidbody != null)
+                surroundedBalls[i].attachedRigidbody.AddExplosionForce(explosionForce, collidedPoint, explosionRadius);
         }
     }
 

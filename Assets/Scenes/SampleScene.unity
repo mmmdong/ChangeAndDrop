@@ -2508,7 +2508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c569beb0257e8448162b56d798dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubeExplosion: {fileID: 558424406}
+  _ballExplosion: {fileID: 558424406}
 --- !u!4 &1597197738
 Transform:
   m_ObjectHideFlags: 0
